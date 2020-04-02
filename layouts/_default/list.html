@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+
+<body>
+  {{ partial "page_header.html" . }}
+
+  <h3>Posts</h3>
+
+  <div>
+
+    <!-- orders content according to the "publishdate" field in front matter -->
+    {{ range .Pages.ByPublishDate }}
+    <div>
+      <a href="{{ .Permalink }}">{{ .Title }}</a><br />
+      <time>{{ .Date.Format "January 2, 2006" }}</time>
+    </div>
+    <br />
+    {{ end }}
+  </div>
+</body>
+
+</html>

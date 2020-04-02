@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+
+<body>
+
+	<h1>{{ .Site.Data.personalize.Name }}</h1>
+
+	<h4>{{ .Site.Data.personalize.About| markdownify }}</h4>
+
+	<table>
+		<tr>
+			{{ if ne .Site.Data.personalize.Github "" }}
+			<td><i class="fab fa-github" aria-hidden="true"></i></td>
+			<td>&nbsp;<a href="https://github.com/{{ .Site.Data.personalize.Github }}" target="_blank">GitHub</a></td>
+			{{ end }}
+		</tr>
+		<tr>
+			{{ if ne .Site.Data.personalize.Twitter "" }}
+			<td><i class="fab fa-twitter" aria-hidden="true"></i></td>
+			<td>&nbsp;<a href="https://twitter.com/{{ .Site.Data.personalize.Twitter }}" target="_blank">Twitter</a>
+			</td>
+			{{ end }}
+		</tr>
+		<tr>
+			{{ if ne .Site.Data.personalize.Goodreads "" }}
+			<td><i class="fab fa-goodreads" aria-hidden="true"></i></td>
+			<td>&nbsp;<a href="{{ .Site.Data.personalize.Goodreads }}" target="_blank">Goodreads</a></td>
+			{{ end }}
+		</tr>
+		<tr>
+			{{ if ne .Site.Data.personalize.Linkedin "" }}
+			<td><i class="fab fa-linkedin" aria-hidden="true"></i></td>
+			<td>&nbsp;<a href="{{ .Site.Data.personalize.Linkedin }}" target="_blank">LinkedIn</a></td>
+			{{ end }}
+		</tr>
+		<tr>
+			{{ if ne .Site.Data.personalize.Resume "" }}
+			<td><i class="fas fa-file-alt" aria-hidden="true"></i></td>
+			<td>&nbsp;<a href="assets/pdf/{{ .Site.Data.personalize.Resume }}" target="_blank">Resume</a></td>
+			{{ end }}
+		</tr>
+		<tr>
+			{{ if ne .Site.Data.personalize.Email "" }}
+			<td><i class="fas fa-envelope" aria-hidden="true"></i></td>
+			<td>&nbsp;<code>{{ .Site.Data.personalize.Email }}</code></td>
+			{{ end }}
+		</tr>
+	</table>
+
+	<h3>Posts</h3>
+
+	<div>
+
+		<!-- orders content according to the "publishdate" field in front matter -->
+		{{ range first .Site.Data.personalize.PostLimit .Pages.ByPublishDate }}
+		<div>
+			<a href="{{ .Permalink }}">{{ .Title }}</a><br />
+			<time>{{ .Date.Format "January 2, 2006" }}</time>
+		</div>
+		<br />
+		{{ end }}
+
+
+		<h3><a href="posts/">View all posts</a></h3>
+	</div>
+
+
+</body>
+
+</html>
