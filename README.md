@@ -9,8 +9,7 @@ Simple, text-focussed and minimal personal portfolio theme based on https://gith
 * Markdown supported
 * Easy to personalize
 * RSS feed
- - TODO
-   - Dark mode
+* Dark mode (taken from https://www.gwern.net/ as it is.)
 
 
 ## Installation
@@ -79,5 +78,6 @@ Too much to rant :(
 ## Credits
 
 * Thanks to [Vegard's](https://github.com/vegarsti) personal site from which the theme was heavily inspired.
+* Also to https://www.gwern.net/ for the dark mode.
 
 Feel free to contribute and open issues.
