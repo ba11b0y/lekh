@@ -1,0 +1,10 @@
+Name = "Agent Smith"
+# Supports markdown
+About = "We're not here because we're free. We're here because we're __not__ free. There's no escaping reason. No denying purpose. Because as we both know without purpose, we would not exist.<br/> Read more [here](https://matrix.fandom.com/wiki/Agent_Smith)"
+Github = "invinciblycool"
+Twitter = "getFANDOM"
+Goodreads = "https://www.goodreads.com/user/show/91520565-rahul-tiwari"
+Linkedin = "https://www.linkedin.com/in/rahul-tiwari-43708b128/"
+Email = "agent.smith@thematrix.com"
+Resume = ""
+PostLimit = 4
