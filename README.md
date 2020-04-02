@@ -8,9 +8,9 @@ Simple, text-focussed and minimal personal portfolio theme based on https://gith
 * Social media links
 * Markdown supported
 * Easy to personalize
+* RSS feed
  - TODO
    - Dark mode
-   - RSS feeds
 
 
 ## Installation
