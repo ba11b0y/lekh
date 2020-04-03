@@ -6,7 +6,9 @@ body {
   max-width: 40rem;
   padding: 2rem;
   margin: auto;
-  background: #fafafa; }
+  background: #fafafa; 
+  overscroll-behavior-y: none;
+}
 
 img {
   max-width: 100%; }
