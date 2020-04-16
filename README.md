@@ -2,7 +2,7 @@
 Simple, text-focussed and minimal personal portfolio theme based on https://github.com/vegarsti/vegarsti.github.io
 
 ## Screenshot ([Live Demo](https://agitated-yonath-d9c445.netlify.com/))
-![Screenshot](./images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/invinciblycool/lekh/master/images/screenshot.png)
 
 ## Features
 * Social media links
