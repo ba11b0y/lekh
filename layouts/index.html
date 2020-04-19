@@ -9,31 +9,9 @@
 	<h4>{{ .Site.Data.personalize.About| markdownify }}</h4>
 
 	<table>
-		<tr>
-			{{ if ne .Site.Data.personalize.Github "" }}
-			<td><i class="fab fa-github" aria-hidden="true"></i></td>
-			<td>&nbsp;<a href="https://github.com/{{ .Site.Data.personalize.Github }}" target="_blank">GitHub</a></td>
-			{{ end }}
-		</tr>
-		<tr>
-			{{ if ne .Site.Data.personalize.Twitter "" }}
-			<td><i class="fab fa-twitter" aria-hidden="true"></i></td>
-			<td>&nbsp;<a href="https://twitter.com/{{ .Site.Data.personalize.Twitter }}" target="_blank">Twitter</a>
-			</td>
-			{{ end }}
-		</tr>
-		<tr>
-			{{ if ne .Site.Data.personalize.Goodreads "" }}
-			<td><i class="fab fa-goodreads" aria-hidden="true"></i></td>
-			<td>&nbsp;<a href="{{ .Site.Data.personalize.Goodreads }}" target="_blank">Goodreads</a></td>
-			{{ end }}
-		</tr>
-		<tr>
-			{{ if ne .Site.Data.personalize.Linkedin "" }}
-			<td><i class="fab fa-linkedin" aria-hidden="true"></i></td>
-			<td>&nbsp;<a href="{{ .Site.Data.personalize.Linkedin }}" target="_blank">LinkedIn</a></td>
-			{{ end }}
-		</tr>
+		{{ range .Site.Data.personalize.profiles }}
+			{{ partial "profile_link.html" . }}
+		{{ end }}
 		<tr>
 			{{ if ne .Site.Data.personalize.Resume "" }}
 			<td><i class="fas fa-file-alt" aria-hidden="true"></i></td>
