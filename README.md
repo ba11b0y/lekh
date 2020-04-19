@@ -41,14 +41,6 @@ Name = ""
 # Supports markdown
 About = ""
 
-# Add only the handle
-Github = ""
-Twitter = ""
-
-# Add the absolute links
-Goodreads = ""
-Linkedin = ""
-
 Email = ""
 
 # Add the filename with file extension.
@@ -56,6 +48,22 @@ Resume = ""
 
 # Sets the number of posts to display on the front page
 PostLimit = 4
+
+[[profiles]]
+name = "GitHub"
+url = ""
+
+[[profiles]]
+name = "Twitter"
+url = ""
+
+[[profiles]]
+name = "Goodreads"
+url = ""
+
+[[profiles]]
+name = "LinkedIn"
+url = ""
 
 ```
 
