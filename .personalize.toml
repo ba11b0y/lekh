@@ -26,3 +26,6 @@ url = ""
 [[profiles]]
 name = "LinkedIn"
 url = ""
+
+[[analytics]]
+code = ""

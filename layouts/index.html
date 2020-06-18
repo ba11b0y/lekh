@@ -10,7 +10,7 @@
 
 	<table>
 		{{ range .Site.Data.personalize.profiles }}
-			{{ partial "profile_link.html" . }}
+		{{ partial "profile_link.html" . }}
 		{{ end }}
 		<tr>
 			{{ if ne .Site.Data.personalize.Resume "" }}
@@ -42,8 +42,9 @@
 
 		<h3><a href="posts/">View all posts</a></h3>
 	</div>
-
-
+	{{ if ne .Site.Data.personalize.analytics.code ""}}
+	<script data-goatcounter="{{ .Site.Data.personalize.analytics.code }}" async src="//gc.zgo.at/count.js"></script>
+	{{ end }}
 </body>
 
 </html>
