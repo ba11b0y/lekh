@@ -11,6 +11,8 @@ Resume = ""
 # Sets the number of posts to display on the front page
 PostLimit = 4
 
+GoatCounterCode = ""
+
 [[profiles]]
 name = "GitHub"
 url = ""
@@ -26,5 +28,3 @@ url = ""
 [[profiles]]
 name = "LinkedIn"
 url = ""
-
-GoatCounterCode = ""
