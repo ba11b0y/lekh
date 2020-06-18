@@ -27,5 +27,4 @@ url = ""
 name = "LinkedIn"
 url = ""
 
-[[analytics]]
-code = ""
+GoatCounterCode = ""

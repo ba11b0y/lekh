@@ -42,8 +42,8 @@
 
 		<h3><a href="posts/">View all posts</a></h3>
 	</div>
-	{{ if ne .Site.Data.personalize.analytics.code ""}}
-	<script data-goatcounter="{{ .Site.Data.personalize.analytics.code }}" async src="//gc.zgo.at/count.js"></script>
+	{{ if ne .Site.Data.personalize.GoatCounterCode ""}}
+	<script data-goatcounter="{{ .Site.Data.personalize.GoatCounterCode }}" async src="//gc.zgo.at/count.js"></script>
 	{{ end }}
 </body>
 

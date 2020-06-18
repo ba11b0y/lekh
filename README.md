@@ -10,6 +10,7 @@ Simple, text-focussed and minimal personal portfolio theme based on https://gith
 * Easy to personalize
 * RSS feed
 * Dark mode (taken from https://www.gwern.net/ as it is.)
+* GoatCounter counts(analytics). Know more about GoatCounter [here](https://goatcounter.com)
 
 
 ## Installation
@@ -64,6 +65,9 @@ url = ""
 [[profiles]]
 name = "LinkedIn"
 url = ""
+
+# This is the endpoint under the integrations section of the Site Code
+GoatCounterCode = ""
 
 ```
 
