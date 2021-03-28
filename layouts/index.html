@@ -31,12 +31,14 @@
 	<div>
 
 		<!-- orders content according to the "publishdate" field in front matter -->
+		{{ with .Site.Data.personalize.PostLimit }}
 		{{ range first .Site.Data.personalize.PostLimit .Pages.ByPublishDate }}
 		<div>
 			<a href="{{ .Permalink }}">{{ .Title }}</a><br />
 			<time>{{ .Date.Format "January 2, 2006" }}</time>
 		</div>
 		<br />
+		{{ end }}
 		{{ end }}
 
 
