@@ -4,24 +4,24 @@
 
 <body>
 
-	<h1>{{ .Site.Data.personalize.Name }}</h1>
+	<h1>{{ .Site.Params.Name }}</h1>
 
-	<h4>{{ .Site.Data.personalize.About| markdownify }}</h4>
+	<div>{{ .Content }}</div>
 
 	<table>
-		{{ range .Site.Data.personalize.profiles }}
+		{{ range .Site.Params.profiles }}
 		{{ partial "profile_link.html" . }}
 		{{ end }}
 		<tr>
-			{{ if ne .Site.Data.personalize.Resume "" }}
+			{{ if ne .Site.Params.Resume "" }}
 			<td><i class="fas fa-file-alt" aria-hidden="true"></i></td>
-			<td>&nbsp;<a href="/resume/{{ .Site.Data.personalize.Resume }}" target="_blank">Resume</a></td>
+			<td>&nbsp;<a href="/resume/{{ .Site.Params.Resume }}" target="_blank">Resume</a></td>
 			{{ end }}
 		</tr>
 		<tr>
-			{{ if ne .Site.Data.personalize.Email "" }}
+			{{ if ne .Site.Params.Email "" }}
 			<td><i class="fas fa-envelope" aria-hidden="true"></i></td>
-			<td>&nbsp;<code>{{ .Site.Data.personalize.Email }}</code></td>
+			<td>&nbsp;<code>{{ .Site.Params.Email }}</code></td>
 			{{ end }}
 		</tr>
 	</table>
@@ -31,21 +31,19 @@
 	<div>
 
 		<!-- orders content according to the "publishdate" field in front matter -->
-		{{ with .Site.Data.personalize.PostLimit }}
-		{{ range first .Site.Data.personalize.PostLimit .Pages.ByPublishDate }}
+		{{ range first (.Site.Params.PostLimit | default 4) (where .Site.RegularPages.ByPublishDate "Section" "posts") }}
 		<div>
 			<a href="{{ .Permalink }}">{{ .Title }}</a><br />
 			<time>{{ .Date.Format "January 2, 2006" }}</time>
 		</div>
 		<br />
 		{{ end }}
-		{{ end }}
 
 
 		<h3><a href="posts/">View all posts</a></h3>
 	</div>
-	{{ if ne .Site.Data.personalize.GoatCounterCode "" }}
-	<script data-goatcounter="{{ .Site.Data.personalize.GoatCounterCode }}" async src="//gc.zgo.at/count.js"></script>
+	{{ if ne .Site.Params.GoatCounterCode "" }}
+	<script data-goatcounter="{{ .Site.Params.GoatCounterCode }}" async src="//gc.zgo.at/count.js"></script>
 	{{ end }}
 </body>
 

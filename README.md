@@ -29,28 +29,27 @@ For more information read the [official setup guide](https://gohugo.io/overview/
 
 To personalize the theme
 
-`cp themes/lekh/.personalize.toml data/personalize.toml`
+`cp themes/lekh/exampleSite/config.toml config.toml`
 
 And then customize accordingly.
 
-Or simply copy the below into a new file called `data/personalize.toml` and customize accordingly.
+Or simply copy the below config and customize accordingly.
 
 ```toml
 
+baseURL = "http://rtiwari.me/"
+languageCode = "en-us"
+title = "Rahul Tiwari"
+theme = "lekh"
+
+[params]
 Name = ""
-
-# Supports markdown
-About = ""
-
 Email = ""
+Resume = "" # Add the filename with file extension.
+PostLimit = 4 # Sets the number of posts to display on the front page
+GoatCounterCode = ""
 
-# Add the filename with file extension.
-Resume = ""
-
-# Sets the number of posts to display on the front page
-PostLimit = 4
-
-[[profiles]]
+[[params.profiles]]
 name = "GitHub"
 url = ""
 
@@ -58,16 +57,13 @@ url = ""
 name = "Twitter"
 url = ""
 
-[[profiles]]
+[[params.profiles]]
 name = "Goodreads"
 url = ""
 
-[[profiles]]
+[[params.profiles]]
 name = "LinkedIn"
 url = ""
-
-# This is the endpoint under the integrations section of the Site Code
-GoatCounterCode = ""
 
 ```
 
