@@ -53,7 +53,7 @@ GoatCounterCode = ""
 name = "GitHub"
 url = ""
 
-[[profiles]]
+[[params.profiles]]
 name = "Twitter"
 url = ""
 
