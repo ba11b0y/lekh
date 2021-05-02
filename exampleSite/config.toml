@@ -1,26 +1,26 @@
-baseURL = "http://rtiwari.me/"
+baseURL = "https://example.com/"
 languageCode = "en-us"
-title = "Rahul Tiwari"
+title = "Example Lekh Site"
 theme = "lekh"
 
 [params]
-Name = ""
-Email = ""
+Name = "Agent Smith"
+Email = "agentsmith@thematrix.com"
 Resume = "" # Add the filename with file extension.
 PostLimit = 4 # Sets the number of posts to display on the front page
 GoatCounterCode = ""
 
 [[params.profiles]]
 name = "GitHub"
-url = ""
+url = "https://github.com/ba11b0y"
 
 [[params.profiles]]
 name = "Twitter"
-url = ""
+url = "https://twitter.com/ba11b0y"
 
 [[params.profiles]]
 name = "Goodreads"
-url = ""
+url = "https://www.goodreads.com/user/show/91520565-rahul-tiwari"
 
 [[params.profiles]]
 name = "LinkedIn"

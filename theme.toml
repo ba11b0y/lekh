@@ -1,8 +1,8 @@
 name = "Lekh"
 license = "MIT"
-licenselink = "https://github.com/invinciblycool/lekh/blob/master/LICENSE.md"
+licenselink = "https://github.com/ba11b0y/lekh/blob/master/LICENSE.md"
 description = "A text focussed and minimal personal portfolio theme with dark mode."
-homepage = "https://github.com/invinciblycool/lekh"
+homepage = "https://github.com/ba11b0y/lekh"
 tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "text-focussed", "dark", "dark-mode", "rss"]
 features = ["blog", "Clean and minimal", "Responsive", "Social media links", "Markdown", "Text focussed", "Dark mode", "RSS feeds"]
 min_version = "0.38"

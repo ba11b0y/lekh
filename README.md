@@ -15,19 +15,41 @@ Simple, text-focussed and minimal personal portfolio theme based on https://gith
 
 ## Installation
 
-cd into your hugo site's root directory and:
+### Installing Hugo
 
 ```sh
-cd themes
-git clone https://github.com/invinciblycool/lekh.git
+# For Linux
+sudo apt-get install hugo
+
+# For Mac
+brew install hugo
+
+# Detailed instructions at https://gohugo.io/getting-started/installing#readout
 ```
 
-For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.
+### Creating a new site
+
+```sh
+hugo new site <site_name>
+```
+
+### Adding lekh as a theme
+
+```sh
+cd <site_name>
+git init
+git submodule add https://github.com/ba11b0y/lekh.git themes/lekh
+echo theme = \"lekh\" >> config.toml
+
+```
+
+Here's Hugo's [official guide](https://gohugo.io/getting-started/quick-start/) for more details.
 
 
 ## Personalization
 
-To personalize the theme
+Hugo looks for a `config.toml` in the root of your site.
+To personalize the theme, copy the default config shipped with the theme
 
 `cp themes/lekh/exampleSite/config.toml config.toml`
 
@@ -37,29 +59,29 @@ Or simply copy the below config and customize accordingly.
 
 ```toml
 
-baseURL = "http://rtiwari.me/"
+baseURL = "https://example.com/"
 languageCode = "en-us"
-title = "Rahul Tiwari"
+title = "Example Lekh Site"
 theme = "lekh"
 
 [params]
-Name = ""
-Email = ""
+Name = "Agent Smith"
+Email = "agentsmith@thematrix.com"
 Resume = "" # Add the filename with file extension.
 PostLimit = 4 # Sets the number of posts to display on the front page
 GoatCounterCode = ""
 
 [[params.profiles]]
 name = "GitHub"
-url = ""
+url = "https://github.com/ba11b0y"
 
 [[params.profiles]]
 name = "Twitter"
-url = ""
+url = "https://twitter.com/ba11b0y"
 
 [[params.profiles]]
 name = "Goodreads"
-url = ""
+url = "https://www.goodreads.com/user/show/91520565-rahul-tiwari"
 
 [[params.profiles]]
 name = "LinkedIn"
@@ -67,20 +89,22 @@ url = ""
 
 ```
 
-## Posts
+## Creating posts
 
-Below is a typical post, which defaults to what Hugo expects.
+```sh
+# This creates a new draft post in content/posts
+hugo new posts/title-of-post.md
+```
 
-Specify `draft: true` to avoid publishing the post.
+## Serving it up
 
-```md
----
-title: "Rant post"
-date: "2020-04-02"
-draft: true
----
+```sh
+# This will show up your draft posts as well.
+hugo server -D
+#OR
 
-Too much to rant :(
+#This will show up only your published posts.
+hugo server
 ```
 
 ## Credits
