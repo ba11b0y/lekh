@@ -1,0 +1,27 @@
+baseURL = "http://rtiwari.me/"
+languageCode = "en-us"
+title = "Rahul Tiwari"
+theme = "lekh"
+
+[params]
+Name = ""
+Email = ""
+Resume = "" # Add the filename with file extension.
+PostLimit = 4 # Sets the number of posts to display on the front page
+GoatCounterCode = ""
+
+[[params.profiles]]
+name = "GitHub"
+url = ""
+
+[[params.profiles]]
+name = "Twitter"
+url = ""
+
+[[params.profiles]]
+name = "Goodreads"
+url = ""
+
+[[params.profiles]]
+name = "LinkedIn"
+url = ""
