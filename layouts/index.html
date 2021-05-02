@@ -5,6 +5,7 @@
 <body>
 
 	<h1>{{ .Site.Params.Name }}</h1>
+	<h4>{{ .Site.Data.personalize.About| markdownify }}</h4>
 
 	<div>{{ .Content }}</div>
 
